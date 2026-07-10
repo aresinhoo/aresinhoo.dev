@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+}
+
+/* HOME */
+body {
+  background-color: #111; /* Arkaplan Rengi */
+  font-family: "Monaco", monospace;
+}
+
+footer {
+  font-family: "Monaco", monospace;
+  color: white;
+  align-items: center;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.avatarIcon {
+  border-radius: 50%; /* Border kapsama alanı */
+  height: 80px; /* Yükseklik */
+  width: 80px; /* Genişlil */
+  vertical-align: middle; /* Çaprazda kaymaması için hizalama */
+}
+
+.highlight1 {
+  color: #00ffcc; /*PASSION rengi farklı*/
+}
+
+#text1 {
+  color: #ffffff; /*yazı görünsün diye rengi değiştir */
+  font-size: 50px;
+  position: relative;
+  top: -40px;
+}
+
+.intro-text {
+  text-align: center; /* yazıyı ekranın ortasına al */
+  margin-top: -60px;
+}
+
+/*Slideshow kutusu */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/*default resim saklama */
+.mySlides {
+  display: none;
+}
+
+/* ileri geri tuşları */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* next tuşunu sağa konumlandır*/
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* geçiş */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* açıklama yazısı */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* sıra sayılarının yazısı falan filan çeviremedim işte (number text)*/
+.numbertext {
+  color: #000000;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* noktalar/yuvarlaklar */
+.dot {
+  cursor:pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/*fade animasyon*/
+.fade {
+  animation-name:fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.navbar {
+  background-color: #000;
+  border-bottom: 1px solid #222;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Monaco", monospace;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #00ffcc;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #00ffcc;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/*CONTACT*/
+
+.contacttext-box {
+  position: relative;
+  text-align: center;
+  top: -110px;
+}
+
+.contact-text {
+  font-size: 60px;
+  position: relative;
+  color: white;
+}
+
+.contactbox {
+  position: relative;
+  align-items: center;
+  top: -100px;
+}
+
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.contact-list li {
+  font-family: "Monaco", monospace;
+  font-size: 30px;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.contact-list a {
+  color: #00ffcc;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+/* PROJECTS */
+.projects-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.projects-title {
+  color: #ffffff;
+  font-family: "Monaco", monospace;
+  margin-bottom: 30px;
+  position: relative;
+  top: -150px;
+  font-size: 60px;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  text-decoration: none;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: #00ffcc;
+}
+
+.project-thumb {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.project-name {
+  color: #ffffff;
+  font-family: "Monaco", monospace;
+  font-size: 20px;
+  margin: 0 0 10px 0;
+}
+
+.project-desc {
+  color: #cccccc;
+  font-family: "Monaco", monospace;
+  font-size: 14px;
+  margin: 0;
+}
